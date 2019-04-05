@@ -13,35 +13,37 @@ ENV \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
+# hadolint ignore=DL3003,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        coreutils \
-        dpkg-dev dpkg \
-        expat-dev \
-        findutils \
-        gcc \
-        gdbm-dev \
-        libc-dev \
-        libffi-dev \
-        libnsl-dev \
-        libtirpc-dev \
-        linux-headers \
-        make \
-        ncurses-dev \
-        openssl-dev \
-        pax-utils \
-        readline-dev \
-        sqlite-dev \
-        tcl-dev \
-        tk \
-        tk-dev \
-        util-linux-dev \
-        xz-dev \
-        zlib-dev \
-        bzip2-dev \
-        gnupg \
+        bzip2-dev=1.0.6-r6 \
+        coreutils=8.30-r0 \
+        dpkg-dev=1.19.2-r0 \
+        dpkg=1.19.2-r0 \
+        expat-dev=2.2.6-r0 \
+        findutils=4.6.0-r1 \
+        gcc=8.2.0-r2 \
+        gdbm-dev=1.13-r1 \
+        gnupg=2.2.12-r0 \
+        libc-dev=0.7.1-r0 \
+        libffi-dev=3.2.1-r6 \
+        libnsl-dev=1.2.0-r0 \
+        libtirpc-dev=1.0.3-r0 \
+        linux-headers=4.18.13-r1 \
+        make=4.2.1-r2 \
+        ncurses-dev=6.1_p20190105-r0 \
+        openssl-dev=1.1.1b-r1 \
+        pax-utils=1.2.3-r0 \
+        readline-dev=7.0.003-r1 \
+        sqlite-dev=3.26.0-r3 \
         tar=1.32-r0 \
-        xz \
+        tcl-dev=8.6.9-r0 \
+        tk-dev=8.6.9-r0 \
+        tk=8.6.9-r0 \
+        util-linux-dev=2.33-r0 \
+        xz-dev=5.2.4-r0 \
+        xz=5.2.4-r0 \
+        zlib-dev=1.2.11-r1 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
