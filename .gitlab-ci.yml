@@ -3,7 +3,7 @@ include: https://raw.githubusercontent.com/hassio-addons/organization/master/git
 
 variables:
   ADDON_GITHUB_REPO: "hassio-addons/addon-base-python"
-  ADDON_SLUG: "base"
+  ADDON_SLUG: "base-python"
   ADDON_TARGET: "base"
 
   ADDON_LEGACY_TAGS: "true"
