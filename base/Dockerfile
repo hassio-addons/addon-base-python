@@ -7,7 +7,7 @@ ENV \
     PATH="/usr/local/bin:$PATH" \
     GPG_KEY="0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D" \
     PYTHON_VERSION="3.7.3" \
-    PYTHON_PIP_VERSION="19.0.3"
+    PYTHON_PIP_VERSION="19.1.1"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
