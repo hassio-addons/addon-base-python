@@ -17,7 +17,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.6-r6 \
-        coreutils=8.30-r0 \
+        coreutils=8.31-r0 \
         dpkg-dev=1.19.2-r0 \
         dpkg=1.19.2-r0 \
         expat-dev=2.2.6-r0 \
