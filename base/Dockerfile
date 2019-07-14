@@ -16,7 +16,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        bzip2-dev=1.0.6-r6 \
+        bzip2-dev=1.0.6-r7 \
         coreutils=8.31-r0 \
         dpkg-dev=1.19.7-r0 \
         dpkg=1.19.7-r0 \
