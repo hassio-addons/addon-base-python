@@ -20,7 +20,7 @@ RUN \
         coreutils=8.31-r0 \
         dpkg-dev=1.19.7-r0 \
         dpkg=1.19.7-r0 \
-        expat-dev=2.2.7-r0 \
+        expat-dev=2.2.7-r1 \
         findutils=4.6.0-r1 \
         gcc=8.3.0-r0 \
         gdbm-dev=1.13-r1 \
