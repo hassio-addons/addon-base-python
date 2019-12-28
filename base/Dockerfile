@@ -18,8 +18,8 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r1 \
         coreutils=8.31-r0 \
-        dpkg-dev=1.19.7-r0 \
-        dpkg=1.19.7-r0 \
+        dpkg-dev=1.19.7-r1 \
+        dpkg=1.19.7-r1 \
         expat-dev=2.2.8-r0 \
         findutils=4.6.0-r1 \
         gcc=8.3.0-r0 \
