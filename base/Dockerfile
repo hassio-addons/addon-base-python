@@ -22,7 +22,7 @@ RUN \
         dpkg=1.19.7-r1 \
         expat-dev=2.2.9-r1 \
         findutils=4.7.0-r0 \
-        gcc=8.3.0-r0 \
+        gcc=9.2.0-r3 \
         gdbm-dev=1.13-r1 \
         gnupg=2.2.19-r0 \
         libc-dev=0.7.2-r0 \
