@@ -27,7 +27,7 @@ RUN \
         gnupg=2.2.16-r0 \
         libc-dev=0.7.1-r0 \
         libffi-dev=3.2.1-r6 \
-        libnsl-dev=1.2.0-r0 \
+        libnsl-dev=1.2.0-r1 \
         libtirpc-dev=1.1.4-r0 \
         linux-headers=4.19.36-r0 \
         make=4.2.1-r2 \
