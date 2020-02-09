@@ -25,7 +25,7 @@ Docker Python base images used by Community Home Assistant Add-ons.
 
 ## About
 
-These are the Python3 add-on base images for the 
+These are the Python3 add-on base images for the
 Community Home Assistant Add-ons and are created to give the project more
 control over the Python used.
 
