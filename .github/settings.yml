@@ -1,8 +1,8 @@
 ---
 repository:
-  description: "Docker Python base images (Alpine) - Community Hass.io Add-on for Home Assistant"
+  description: "Docker Python base images (Alpine) - Community Home Assistant Add-ons"
   homepage: https://addons.community
-  topics: docker, hassio, hass, baseimage, baseimage-docker, home-automation, home-assistant, alpine, python
+  topics: docker, baseimage, baseimage-docker, addons, home-assistant, home-assistant, alpine, python
   private: false
   has_issues: true
   has_projects: false

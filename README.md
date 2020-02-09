@@ -1,4 +1,4 @@
-# Community Hass.io Add-ons: Python Base Images
+# Community Home Assistant Add-on: Python Base Images
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -21,16 +21,17 @@
 
 [![Support Frenck on Patreon][patreon-shield]][patreon]
 
-Docker Python base images used by Community Hass.io Add-ons.
+Docker Python base images used by Community Home Assistant Add-ons.
 
 ## About
 
-These are the Python3 add-on base images for the Community Hass.io Add-ons
-and are created to give the project more control over the Python used.
+These are the Python3 add-on base images for the 
+Community Home Assistant Add-ons and are created to give the project more
+control over the Python used.
 
 Main reason for this, is because in Alpine 3.9 the shipped Python was broken
 for aarch64 based systems and was also still on Python 3.6 instead of the
-Python 3.7 (at time of creating this intial image).
+Python 3.7 (at time of creating this initial image).
 
 This follows Home Assistant's base images, which made the same move.
 
@@ -54,7 +55,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Community Hass.io Add-ons Discord chat server][discord] for add-on
+- The [Community Home Assistant Add-ons Discord chat server][discord] for add-on
   support and feature requests.
 - The [Home Assistant Discord Chat Server][discord-ha] for general Home
   Assistant discussions and questions.
@@ -80,11 +81,11 @@ The original setup of this repository is by [Franck Nijhof][frenck].
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
-## We have got some Hass.io add-ons for you
+## We have got some Home Assistant add-ons for you
 
-Want some more functionality to your Hass.io Home Assistant instance?
+Want some more functionality to your Home Assistant instance?
 
-We have created multiple add-ons for Hass.io. For a full list, check out
+We have created multiple add-ons for Home Assistant. For a full list, check out
 our [GitHub Repository][repository].
 
 ## License

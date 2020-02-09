@@ -143,12 +143,12 @@ LABEL \
     io.hass.type="base" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Franck Nijhof <frenck@addons.community>" \
-    org.label-schema.description="Community Hass.io Add-ons: ${BUILD_ARCH} Python Base image" \
+    org.label-schema.description="Community Home Assistant Add-on: ${BUILD_ARCH} Python Base image" \
     org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="Addon Python base for ${BUILD_ARCH}" \
+    org.label-schema.name="Add-on Python base for ${BUILD_ARCH}" \
     org.label-schema.schema-version="1.0" \
     org.label-schema.url="https://addons.community" \
     org.label-schema.usage="https://github.com/hassio-addons/addon-base-python/blob/master/README.md" \
     org.label-schema.vcs-ref=${REF} \
     org.label-schema.vcs-url="https://github.com/hassio-addons/addon-base-python" \
-    org.label-schema.vendor="Franck Nijhof"
+    org.label-schema.vendor="Community Home Assistant Add-ons"
