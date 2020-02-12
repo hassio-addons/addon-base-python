@@ -1,6 +1,6 @@
 ---
 repository:
-  description: "Docker Python base images (Alpine) - Community Home Assistant Add-ons"
+  description: "Docker Python base images (Alpine) - Home Assistant Community Add-ons"
   homepage: https://addons.community
   topics: docker, baseimage, baseimage-docker, addons, home-assistant, home-assistant, alpine, python
   private: false

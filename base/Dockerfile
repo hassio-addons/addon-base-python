@@ -143,7 +143,7 @@ LABEL \
     io.hass.type="base" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Franck Nijhof <frenck@addons.community>" \
-    org.label-schema.description="Community Home Assistant Add-on: ${BUILD_ARCH} Python Base image" \
+    org.label-schema.description="Home Assistant Community Add-on: ${BUILD_ARCH} Python Base image" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Add-on Python base for ${BUILD_ARCH}" \
     org.label-schema.schema-version="1.0" \
@@ -151,4 +151,4 @@ LABEL \
     org.label-schema.usage="https://github.com/hassio-addons/addon-base-python/blob/master/README.md" \
     org.label-schema.vcs-ref=${REF} \
     org.label-schema.vcs-url="https://github.com/hassio-addons/addon-base-python" \
-    org.label-schema.vendor="Community Home Assistant Add-ons"
+    org.label-schema.vendor="Home Assistant Community Add-ons"

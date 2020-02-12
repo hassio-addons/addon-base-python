@@ -1,4 +1,4 @@
-# Community Home Assistant Add-on: Python Base Images
+# Home Assistant Community Add-on: Python Base Images
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -21,12 +21,12 @@
 
 [![Support Frenck on Patreon][patreon-shield]][patreon]
 
-Docker Python base images used by Community Home Assistant Add-ons.
+Docker Python base images used by Home Assistant Community Add-ons.
 
 ## About
 
 These are the Python3 add-on base images for the
-Community Home Assistant Add-ons and are created to give the project more
+Home Assistant Community Add-ons and are created to give the project more
 control over the Python used.
 
 Main reason for this, is because in Alpine 3.9 the shipped Python was broken
@@ -55,7 +55,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Community Home Assistant Add-ons Discord chat server][discord] for add-on
+- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
   support and feature requests.
 - The [Home Assistant Discord Chat Server][discord-ha] for general Home
   Assistant discussions and questions.
