@@ -6,7 +6,6 @@ variables:
   ADDON_SLUG: "base-python"
   ADDON_TARGET: "base"
 
-  ADDON_LEGACY_TAGS: "true"
   ADDON_PUBLISH: "false"
 
   ADDON_AARCH64_BASE: "hassioaddons/base-aarch64:7.0.4"
