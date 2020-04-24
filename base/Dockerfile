@@ -32,7 +32,7 @@ RUN \
         linux-headers=4.19.36-r0 \
         make=4.2.1-r2 \
         ncurses-dev=6.1_p20200118-r3 \
-        openssl-dev=1.1.1d-r3 \
+        openssl-dev=1.1.1g-r0 \
         pax-utils=1.2.4-r0 \
         readline-dev=8.0.1-r0 \
         sqlite-dev=3.30.1-r1 \
