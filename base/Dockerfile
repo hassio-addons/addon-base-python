@@ -40,7 +40,7 @@ RUN \
         tcl-dev=8.6.9-r0 \
         tk-dev=8.6.10-r0 \
         tk=8.6.10-r0 \
-        util-linux-dev=2.34-r1 \
+        util-linux-dev=2.35.2-r0 \
         xz-dev=5.2.4-r0 \
         xz=5.2.4-r0 \
         zlib-dev=1.2.11-r3 \
