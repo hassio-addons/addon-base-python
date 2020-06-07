@@ -25,7 +25,7 @@ RUN \
         gcc=9.3.0-r2 \
         gdbm-dev=1.13-r1 \
         gnupg=2.2.20-r0 \
-        libc-dev=0.7.2-r0 \
+        libc-dev=0.7.2-r3 \
         libffi-dev=3.2.1-r6 \
         libnsl-dev=1.2.0-r1 \
         libtirpc-dev=1.1.4-r0 \
