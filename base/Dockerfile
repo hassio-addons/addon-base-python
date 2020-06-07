@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.2.0
+ARG BUILD_FROM=hassioaddons/base:8.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -17,7 +17,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r1 \
-        coreutils=8.31-r0 \
+        coreutils=8.32-r0 \
         dpkg-dev=1.19.7-r1 \
         dpkg=1.19.7-r1 \
         expat-dev=2.2.9-r1 \
