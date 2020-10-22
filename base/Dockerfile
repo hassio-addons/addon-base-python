@@ -24,7 +24,7 @@ RUN \
         findutils=4.7.0-r0 \
         gcc=9.3.0-r2 \
         gdbm-dev=1.13-r1 \
-        gnupg=2.2.20-r0 \
+        gnupg=2.2.23-r0 \
         libc-dev=0.7.2-r3 \
         libffi-dev=3.3-r2 \
         libnsl-dev=1.2.0-r1 \
