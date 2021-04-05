@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.1.4
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.1.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -32,7 +32,7 @@ RUN \
         linux-headers=5.7.8-r0 \
         make=4.3-r0 \
         ncurses-dev=6.2_p20210109-r0 \
-        openssl-dev=1.1.1j-r0 \
+        openssl-dev=1.1.1k-r0 \
         pax-utils=1.2.8-r0 \
         readline-dev=8.1.0-r0 \
         sqlite-dev=3.34.1-r0 \
