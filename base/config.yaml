@@ -1,0 +1,12 @@
+---
+name: Python Base Image
+version: dev
+slug: base-python
+description: Docker Python base images used by Home Assistant Community Add-ons.
+url: https://github.com/hassio-addons/addon-base-python
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
