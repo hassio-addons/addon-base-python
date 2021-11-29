@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.2.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -17,30 +17,30 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r1 \
-        coreutils=8.32-r2 \
+        coreutils=9.0-r2 \
         dpkg-dev=1.20.9-r0 \
         dpkg=1.20.9-r0 \
         expat-dev=2.4.1-r0 \
         findutils=4.8.0-r1 \
-        gcc=10.3.1_git20210424-r2 \
-        gdbm-dev=1.19-r0 \
-        gnupg=2.2.31-r0 \
+        gcc=10.3.1_git20211027-r0 \
+        gdbm-dev=1.22-r0 \
+        gnupg=2.2.31-r1 \
         libc-dev=0.7.2-r3 \
-        libffi-dev=3.3-r2 \
+        libffi-dev=3.4.2-r1 \
         libnsl-dev=1.3.0-r0 \
         libtirpc-dev=1.3.2-r0 \
         linux-headers=5.10.41-r0 \
         make=4.3-r0 \
-        ncurses-dev=6.2_p20210612-r0 \
-        openssl-dev=1.1.1l-r0 \
-        pax-utils=1.3.2-r0 \
-        readline-dev=8.1.0-r0 \
-        sqlite-dev=3.35.5-r0 \
+        ncurses-dev=6.3_p20211120-r0 \
+        openssl-dev=1.1.1l-r7 \
+        pax-utils=1.3.3-r0 \
+        readline-dev=8.1.1-r0 \
+        sqlite-dev=3.36.0-r0 \
         tar=1.34-r0 \
-        tcl-dev=8.6.10-r1 \
-        tk-dev=8.6.10-r1 \
-        tk=8.6.10-r1 \
-        util-linux-dev=2.37.2-r0 \
+        tcl-dev=8.6.11-r0 \
+        tk-dev=8.6.11-r0 \
+        tk=8.6.11-r0 \
+        util-linux-dev=2.37.2-r1 \
         xz-dev=5.2.5-r0 \
         xz=5.2.5-r0 \
         zlib-dev=1.2.11-r3 \
