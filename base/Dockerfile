@@ -20,7 +20,7 @@ RUN \
         coreutils=9.0-r2 \
         dpkg-dev=1.20.9-r0 \
         dpkg=1.20.9-r0 \
-        expat-dev=2.4.1-r0 \
+        expat-dev=2.4.5-r0 \
         findutils=4.8.0-r1 \
         gcc=10.3.1_git20211027-r0 \
         gdbm-dev=1.22-r0 \
@@ -40,7 +40,7 @@ RUN \
         tcl-dev=8.6.11-r0 \
         tk-dev=8.6.11-r0 \
         tk=8.6.11-r0 \
-        util-linux-dev=2.37.2-r1 \
+        util-linux-dev=2.37.4-r0 \
         xz-dev=5.2.5-r0 \
         xz=5.2.5-r0 \
         zlib-dev=1.2.11-r3 \
