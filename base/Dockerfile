@@ -112,13 +112,6 @@ RUN \
         --no-cache-dir \
         "pip==$PYTHON_PIP_VERSION" \
     \
-    && find /usr/local -depth \
-        \( \
-            \( -type d -a \( -name test -o -name tests \) \) \
-            -o \
-            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
-        \) -exec rm -rf '{}' +  \
-    \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
         /usr/src \
@@ -126,7 +119,14 @@ RUN \
         /tmp/* \
     \
     && python3 --version \
-    && pip3 --version
+    && pip3 --version \
+    \
+    && find /usr/local -depth \
+        \( \
+            \( -type d -a \( -name test -o -name tests \) \) \
+            -o \
+            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
+        \) -exec rm -rf '{}' +
 
 # Entrypoint & CMD
 ENTRYPOINT ["/init"]
