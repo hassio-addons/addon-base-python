@@ -19,7 +19,7 @@ RUN \
         bzip2-dev=1.0.8-r1 \
         dpkg-dev=1.20.9-r0 \
         dpkg=1.20.9-r0 \
-        expat-dev=2.4.5-r0 \
+        expat-dev=2.4.7-r0 \
         findutils=4.8.0-r1 \
         gcc=10.3.1_git20211027-r0 \
         gdbm-dev=1.22-r0 \
