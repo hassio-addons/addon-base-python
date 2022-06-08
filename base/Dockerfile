@@ -5,9 +5,10 @@ FROM ${BUILD_FROM}
 # Environment variables
 ENV \
     PATH="/usr/local/bin:$PATH" \
-    GPG_KEY="E3FF2839C048B25C084DEBE9B26995E310250568" \
-    PYTHON_VERSION="3.9.10" \
-    PYTHON_PIP_VERSION="22.0.4"
+    GPG_KEY="CFDCA245B1043CF2A5F97865FFE87404168BD847" \
+    PYTHON_VERSION="3.10.5" \
+    PYTHON_PIP_VERSION="22.1.2" \
+    PYTHON_SETUPTOOLS_VERSION="62.3.3"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -70,12 +71,14 @@ RUN \
         --enable-optimizations \
         --enable-option-checking=fatal \
         --enable-shared \
+        --with-lto \
         --with-system-expat \
         --with-system-ffi \
         --without-ensurepip \
     \
     && make -j "$(nproc)" \
         EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" \
+        LDFLAGS="-Wl,--strip-all" \
     && make install \
     \
     && find /usr/local \
@@ -91,13 +94,6 @@ RUN \
             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
             | xargs -rt apk add --no-cache --virtual .python-rundeps \
     \
-    && find /usr/local -depth \
-        \( \
-            \( -type d -a \( -name test -o -name tests \) \) \
-            -o \
-            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
-        \) -exec rm -rf '{}' + \
-    \
     && cd /usr/local/bin \
     && ln -s idle3 idle \
     && ln -s pydoc3 pydoc \
@@ -110,7 +106,9 @@ RUN \
     && python /tmp/get-pip.py \
         --disable-pip-version-check \
         --no-cache-dir \
+        --no-compile \
         "pip==$PYTHON_PIP_VERSION" \
+        "setuptools==$PYTHON_SETUPTOOLS_VERSION" \
     \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
@@ -123,9 +121,9 @@ RUN \
     \
     && find /usr/local -depth \
         \( \
-            \( -type d -a \( -name test -o -name tests \) \) \
+            \( -type d -a \( -name test -o -name tests -o -name idle_test \) \) \
             -o \
-            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
+            \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name 'libpython*.a' \) \) \
         \) -exec rm -rf '{}' +
 
 # Entrypoint & CMD
