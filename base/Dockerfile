@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -28,7 +28,7 @@ RUN \
         libc-dev=0.7.2-r3 \
         libffi-dev=3.4.2-r1 \
         libnsl-dev=2.0.0-r0 \
-        libtirpc-dev=1.3.2-r0 \
+        libtirpc-dev=1.3.2-r1 \
         linux-headers=5.16.7-r1 \
         make=4.3-r0 \
         ncurses-dev=6.3_p20220521-r0 \
@@ -37,13 +37,13 @@ RUN \
         readline-dev=8.1.2-r0 \
         sqlite-dev=3.38.5-r0 \
         tar=1.34-r0 \
-        tcl-dev=8.6.12-r0 \
+        tcl-dev=8.6.12-r1 \
         tk-dev=8.6.12-r0 \
         tk=8.6.12-r0 \
         util-linux-dev=2.38-r1 \
         xz-dev=5.2.5-r1 \
         xz=5.2.5-r1 \
-        zlib-dev=1.2.12-r1 \
+        zlib-dev=1.2.12-r3 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
