@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.4
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.5
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -20,7 +20,7 @@ RUN \
         bzip2-dev=1.0.8-r1 \
         dpkg-dev=1.21.8-r0 \
         dpkg=1.21.8-r0 \
-        expat-dev=2.4.8-r0 \
+        expat-dev=2.5.0-r0 \
         findutils=4.9.0-r0 \
         gcc=11.2.1_git20220219-r2 \
         gdbm-dev=1.23-r0 \
@@ -32,7 +32,7 @@ RUN \
         linux-headers=5.16.7-r1 \
         make=4.3-r0 \
         ncurses-dev=6.3_p20220521-r0 \
-        openssl-dev=1.1.1q-r0 \
+        openssl-dev=1.1.1s-r0 \
         pax-utils=1.3.4-r0 \
         readline-dev=8.1.2-r0 \
         sqlite-dev=3.38.5-r0 \
