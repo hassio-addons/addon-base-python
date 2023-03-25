@@ -31,7 +31,7 @@ RUN \
         libtirpc-dev=1.3.2-r1 \
         linux-headers=5.16.7-r1 \
         make=4.3-r1 \
-        ncurses-dev=6.3_p20220521-r0 \
+        ncurses-dev=6.3_p20221119-r0 \
         openssl-dev=3.0.8-r1 \
         pax-utils=1.3.4-r0 \
         readline-dev=8.1.2-r0 \
