@@ -26,7 +26,7 @@ RUN \
         gdbm-dev=1.23-r0 \
         gnupg=2.2.40-r0 \
         libc-dev=0.7.2-r3 \
-        libffi-dev=3.4.2-r1 \
+        libffi-dev=3.4.4-r0 \
         libnsl-dev=2.0.0-r0 \
         libtirpc-dev=1.3.2-r1 \
         linux-headers=5.16.7-r1 \
