@@ -42,7 +42,7 @@ RUN \
         tk=8.6.12-r1 \
         util-linux-dev=2.38-r1 \
         xz-dev=5.2.9-r0 \
-        xz=5.2.5-r1 \
+        xz=5.2.9-r0 \
         zlib-dev=1.2.12-r3 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
