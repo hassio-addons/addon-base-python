@@ -17,7 +17,7 @@ ARG PYTHON_SETUPTOOLS_VERSION="65.3.0"
 # hadolint ignore=DL3003,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        bzip2-dev=1.0.8-r1 \
+        bzip2-dev=1.0.8-r4 \
         dpkg-dev=1.21.8-r0 \
         dpkg=1.21.8-r0 \
         expat-dev=2.4.8-r0 \
