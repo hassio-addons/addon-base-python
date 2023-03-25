@@ -34,7 +34,7 @@ RUN \
         ncurses-dev=6.3_p20221119-r0 \
         openssl-dev=3.0.8-r1 \
         pax-utils=1.3.4-r0 \
-        readline-dev=8.1.2-r0 \
+        readline-dev=8.2.0-r0 \
         sqlite-dev=3.40.1-r0 \
         tar=1.34-r0 \
         tcl-dev=8.6.12-r1 \
