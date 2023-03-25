@@ -38,7 +38,7 @@ RUN \
         sqlite-dev=3.38.5-r0 \
         tar=1.34-r0 \
         tcl-dev=8.6.12-r1 \
-        tk-dev=8.6.12-r0 \
+        tk-dev=8.6.12-r1 \
         tk=8.6.12-r0 \
         util-linux-dev=2.38-r1 \
         xz-dev=5.2.5-r1 \
