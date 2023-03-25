@@ -6,15 +6,15 @@ FROM ${BUILD_FROM}
 ENV \
     PATH="/usr/local/bin:$PATH" \
     GPG_KEY="CFDCA245B1043CF2A5F97865FFE87404168BD847" \
-    PYTHON_VERSION="3.10.7" \
-    PYTHON_PIP_VERSION="22.2.2" \
-    PYTHON_SETUPTOOLS_VERSION="65.3.0"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
 # hadolint ignore=DL3003,SC2155
+ARG PYTHON_VERSION="3.10.7"
+ARG PYTHON_PIP_VERSION="22.2.2"
+ARG PYTHON_SETUPTOOLS_VERSION="65.3.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r1 \
