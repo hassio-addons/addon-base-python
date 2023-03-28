@@ -46,9 +46,9 @@ RUN \
         zlib-dev=1.2.13-r0 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
-        "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+        "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
     && curl -J -L -o /tmp/python.tar.xz.asc \
-        "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+        "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz.asc" \
     \
     && export GNUPGHOME="$(mktemp -d)" \
     && gpg \
