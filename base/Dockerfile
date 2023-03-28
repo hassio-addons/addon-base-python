@@ -11,7 +11,7 @@ ENV \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
-ARG PYTHON_VERSION="3.10.7"
+ARG PYTHON_VERSION="v3.11.2"
 ARG PYTHON_PIP_VERSION="23.0.1"
 ARG PYTHON_SETUPTOOLS_VERSION="67.6.0"
 # hadolint ignore=DL3003,DL4006,SC2155
@@ -46,9 +46,9 @@ RUN \
         zlib-dev=1.2.13-r0 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
-        "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+        "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
     && curl -J -L -o /tmp/python.tar.xz.asc \
-        "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+        "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz.asc" \
     \
     && export GNUPGHOME="$(mktemp -d)" \
     && gpg \
