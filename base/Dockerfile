@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -17,33 +17,33 @@ ARG PYTHON_SETUPTOOLS_VERSION="67.7.2"
 # hadolint ignore=DL3003,DL4006,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        bzip2-dev=1.0.8-r4 \
-        dpkg-dev=1.21.9-r0 \
-        dpkg=1.21.9-r0 \
-        expat-dev=2.5.0-r0 \
-        findutils=4.9.0-r3 \
-        gcc=12.2.1_git20220924-r4 \
-        gdbm-dev=1.23-r0 \
-        gnupg=2.2.40-r0 \
-        libc-dev=0.7.2-r3 \
-        libffi-dev=3.4.4-r0 \
+        bzip2-dev=1.0.8-r5 \
+        dpkg-dev=1.21.21-r1 \
+        dpkg=1.21.21-r1 \
+        expat-dev=2.5.0-r1 \
+        findutils=4.9.0-r5 \
+        gcc=12.2.1_git20220924-r10 \
+        gdbm-dev=1.23-r1 \
+        gnupg=2.4.1-r1 \
+        libc-dev=0.7.2-r5 \
+        libffi-dev=3.4.4-r2 \
         libnsl-dev=2.0.0-r0 \
-        libtirpc-dev=1.3.3-r0 \
-        linux-headers=5.19.5-r0 \
-        make=4.3-r1 \
-        ncurses-dev=6.3_p20221119-r0 \
-        openssl-dev=3.0.8-r4 \
-        pax-utils=1.3.5-r1 \
-        readline-dev=8.2.0-r0 \
-        sqlite-dev=3.40.1-r0 \
-        tar=1.34-r2 \
-        tcl-dev=8.6.12-r1 \
-        tk-dev=8.6.12-r1 \
-        tk=8.6.12-r1 \
-        util-linux-dev=2.38.1-r1 \
-        xz-dev=5.2.9-r0 \
-        xz=5.2.9-r0 \
-        zlib-dev=1.2.13-r0 \
+        libtirpc-dev=1.3.3-r2 \
+        linux-headers=6.3-r0 \
+        make=4.4.1-r1 \
+        ncurses-dev=6.4_p20230506-r0 \
+        openssl-dev=3.1.0-r4 \
+        pax-utils=1.3.7-r1 \
+        readline-dev=8.2.1-r1 \
+        sqlite-dev=3.41.2-r2 \
+        tar=1.34-r3 \
+        tcl-dev=8.6.13-r1 \
+        tk-dev=8.6.13-r1 \
+        tk=8.6.13-r1 \
+        util-linux-dev=2.38.1-r7 \
+        xz-dev=5.4.3-r0 \
+        xz=5.4.3-r0 \
+        zlib-dev=1.2.13-r1 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
