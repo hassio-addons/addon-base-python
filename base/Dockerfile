@@ -13,7 +13,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install base system
 ARG PYTHON_VERSION="v3.11.4"
 ARG PYTHON_PIP_VERSION="23.1.2"
-ARG PYTHON_SETUPTOOLS_VERSION="67.8.0"
+ARG PYTHON_SETUPTOOLS_VERSION="68.0.0"
 # hadolint ignore=DL3003,DL4006,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
