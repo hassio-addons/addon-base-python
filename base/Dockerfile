@@ -24,7 +24,7 @@ RUN \
         findutils=4.9.0-r5 \
         gcc=12.2.1_git20220924-r10 \
         gdbm-dev=1.23-r1 \
-        gnupg=2.4.1-r1 \
+        gnupg=2.4.3-r0 \
         libc-dev=0.7.2-r5 \
         libffi-dev=3.4.4-r2 \
         libnsl-dev=2.0.0-r0 \
