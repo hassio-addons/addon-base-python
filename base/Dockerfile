@@ -5,7 +5,7 @@ FROM ${BUILD_FROM}
 # Environment variables
 ENV \
     PATH="/usr/local/bin:$PATH" \
-    GPG_KEY="A035C8C19219BA821ECEA86B64E628F8D684696D"
+    GPG_KEY="7169605F62C751356D054A26A821E680E5FA6305"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
