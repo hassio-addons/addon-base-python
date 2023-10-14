@@ -73,7 +73,6 @@ RUN \
         --enable-shared \
         --with-lto \
         --with-system-expat \
-        --with-system-ffi \
         --without-ensurepip \
     \
     && make -j "$(nproc)" \
