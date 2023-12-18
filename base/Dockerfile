@@ -12,7 +12,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
 ARG PYTHON_VERSION="v3.12.1"
-ARG PYTHON_PIP_VERSION="23.3.1"
+ARG PYTHON_PIP_VERSION="23.3.2"
 ARG PYTHON_SETUPTOOLS_VERSION="69.0.2"
 # hadolint ignore=DL3003,DL4006,SC2155
 RUN \
