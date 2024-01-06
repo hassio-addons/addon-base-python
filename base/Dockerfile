@@ -17,33 +17,33 @@ ARG PYTHON_SETUPTOOLS_VERSION="69.0.3"
 # hadolint ignore=DL3003,DL4006,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        bzip2-dev=1.0.8-r5 \
-        dpkg-dev=1.21.21-r1 \
-        dpkg=1.21.21-r1 \
-        expat-dev=2.5.0-r1 \
+        bzip2-dev=1.0.8-r6 \
+        dpkg-dev=1.22.1-r0 \
+        dpkg=1.22.1-r0 \
+        expat-dev=2.5.0-r2 \
         findutils=4.9.0-r5 \
-        gcc=12.2.1_git20220924-r10 \
+        gcc=13.2.1_git20231014-r0 \
         gdbm-dev=1.23-r1 \
-        gnupg=2.4.3-r0 \
+        gnupg=2.4.3-r1 \
         libc-dev=0.7.2-r5 \
-        libffi-dev=3.4.4-r2 \
-        libnsl-dev=2.0.0-r0 \
-        libtirpc-dev=1.3.3-r2 \
-        linux-headers=6.3-r0 \
-        make=4.4.1-r1 \
-        ncurses-dev=6.4_p20230506-r0 \
-        openssl-dev=3.1.4-r1 \
-        pax-utils=1.3.7-r1 \
-        readline-dev=8.2.1-r1 \
-        sqlite-dev=3.41.2-r2 \
-        tar=1.34-r3 \
+        libffi-dev=3.4.4-r3 \
+        libnsl-dev=2.0.1-r0 \
+        libtirpc-dev=1.3.4-r0 \
+        linux-headers=6.5-r0 \
+        make=4.4.1-r2 \
+        ncurses-dev=6.4_p20231125-r0 \
+        openssl-dev=3.1.4-r2 \
+        pax-utils=1.3.7-r2 \
+        readline-dev=8.2.1-r2 \
+        sqlite-dev=3.44.2-r0 \
+        tar=1.35-r2 \
         tcl-dev=8.6.13-r1 \
-        tk-dev=8.6.13-r1 \
-        tk=8.6.13-r1 \
-        util-linux-dev=2.38.1-r8 \
-        xz-dev=5.4.3-r0 \
-        xz=5.4.3-r0 \
-        zlib-dev=1.2.13-r1 \
+        tk-dev=8.6.13-r2 \
+        tk=8.6.13-r2 \
+        util-linux-dev=2.39.3-r0 \
+        xz-dev=5.4.5-r0 \
+        xz=5.4.5-r0 \
+        zlib-dev=1.3-r2 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
