@@ -43,7 +43,7 @@ RUN \
         util-linux-dev=2.39.3-r0 \
         xz-dev=5.4.5-r0 \
         xz=5.4.5-r0 \
-        zlib-dev=1.3-r2 \
+        zlib-dev=1.3.1-r0 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
