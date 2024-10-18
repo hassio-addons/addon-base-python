@@ -78,6 +78,7 @@ RUN \
     && make -j "$(nproc)" \
         EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" \
         LDFLAGS="-Wl,--strip-all" \
+        PROFILE_TASK="" \
     && make install \
     \
     && find /usr/local \
