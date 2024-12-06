@@ -18,32 +18,32 @@ ARG PYTHON_SETUPTOOLS_VERSION="75.6.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r6 \
-        dpkg-dev=1.22.6-r1 \
-        dpkg=1.22.6-r1 \
+        dpkg-dev=1.22.11-r0\
+        dpkg=1.22.11-r0 \
         expat-dev=2.6.4-r0 \
-        findutils=4.9.0-r5 \
-        gcc=13.2.1_git20240309-r0 \
-        gdbm-dev=1.23-r1 \
-        gnupg=2.4.5-r0 \
+        findutils=4.10.0-r0 \
+        gcc=14.2.0-r4\
+        gdbm-dev=1.24-r0 \
+        gnupg=2.4.7-r0\
         libffi-dev=3.4.6-r0 \
         libnsl-dev=2.0.1-r0 \
-        libtirpc-dev=1.3.4-r0 \
-        linux-headers=6.6-r0 \
+        libtirpc-dev=1.3.5-r0 \
+        linux-headers=6.6-r1 \
         make=4.4.1-r2 \
-        musl-dev=1.2.5-r0 \
-        ncurses-dev=6.4_p20240420-r2 \
-        openssl-dev=3.3.2-r1 \
-        pax-utils=1.3.7-r2 \
-        readline-dev=8.2.10-r0 \
-        sqlite-dev=3.45.3-r1 \
+        musl-dev=1.2.5-r8 \
+        ncurses-dev=6.5_p20241006-r3 \
+        openssl-dev=3.3.2-r4 \
+        pax-utils=1.3.8-r1\
+        readline-dev=8.2.13-r0 \
+        sqlite-dev=3.47.1-r0 \
         tar=1.35-r2 \
-        tcl-dev=8.6.14-r1 \
-        tk-dev=8.6.14-r0 \
-        tk=8.6.14-r0 \
-        util-linux-dev=2.40.1-r1 \
-        xz-dev=5.6.2-r0 \
-        xz=5.6.2-r0 \
-        zlib-dev=1.3.1-r1 \
+        tcl-dev=8.6.15-r0 \
+        tk-dev=8.6.15-r0\
+        tk=8.6.15-r0 \
+        util-linux-dev=2.40.2-r4\
+        xz-dev=5.6.3-r0 \
+        xz=5.6.3-r0\
+        zlib-dev=1.3.1-r2 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
