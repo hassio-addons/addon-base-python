@@ -35,7 +35,7 @@ RUN \
         openssl-dev=3.3.2-r4 \
         pax-utils=1.3.8-r1\
         readline-dev=8.2.13-r0 \
-        sqlite-dev=3.47.1-r0 \
+        sqlite-dev=3.48.0-r0 \
         tar=1.35-r2 \
         tcl-dev=8.6.15-r0 \
         tk-dev=8.6.15-r0\
