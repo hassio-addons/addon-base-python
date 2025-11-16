@@ -6,9 +6,6 @@
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
 [![GitLab CI][gitlabci-shield]][gitlabci]
 ![Project Maintenance][maintenance-shield]
@@ -114,8 +111,6 @@ SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-base.svg
 [commits]: https://github.com/hassio-addons/addon-base-python/commits/master
 [contributors]: https://github.com/hassio-addons/addon-base-python/graphs/contributors
@@ -129,10 +124,8 @@ SOFTWARE.
 [github-sponsors]: https://github.com/sponsors/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-base-python/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-base-python/pipelines
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-base-python/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[label-schema]: http://label-schema.org/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-base-python.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2025.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
