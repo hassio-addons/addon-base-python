@@ -3,17 +3,17 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base:19.0.0
 FROM ${BUILD_FROM}
 
 # Environment variables
-ENV \
-    PATH="/usr/local/bin:$PATH" \
-    GPG_KEY="7169605F62C751356D054A26A821E680E5FA6305"
+ENV PATH="/usr/local/bin:$PATH"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install base system
-ARG PYTHON_VERSION="v3.13.7"
+ARG PYTHON_VERSION="v3.14.0"
+ARG PYTHON_SHA256="2299dae542d395ce3883aca00d3c910307cd68e0b2f7336098c8e7b7eee9f3e9"
 ARG PYTHON_PIP_VERSION="25.3"
 ARG PYTHON_SETUPTOOLS_VERSION="80.9.0"
+
 # hadolint ignore=DL3003,DL4006,SC2155
 RUN \
     apk add --no-cache --virtual .build-dependencies \
@@ -24,7 +24,6 @@ RUN \
         findutils=4.10.0-r0 \
         gcc=14.2.0-r6 \
         gdbm-dev=1.24-r0 \
-        gnupg=2.4.7-r0 \
         libffi-dev=3.4.8-r0 \
         libnsl-dev=2.0.1-r1 \
         libtirpc-dev=1.3.5-r0 \
@@ -44,21 +43,12 @@ RUN \
         xz-dev=5.8.1-r0 \
         xz=5.8.1-r0 \
         zlib-dev=1.3.1-r2 \
+        zstd-dev=1.5.7-r0 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
-    && curl -J -L -o /tmp/python.tar.xz.asc \
-        "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz.asc" \
     \
-    && export GNUPGHOME="$(mktemp -d)" \
-    && gpg \
-        --batch \
-        --keyserver hkps://keys.openpgp.org \
-        --recv-keys "$GPG_KEY" \
-    && gpg \
-        --batch \
-        --verify /tmp/python.tar.xz.asc /tmp/python.tar.xz \
-    && { command -v gpgconf > /dev/null && gpgconf --kill all || :; } \
+    && echo "$PYTHON_SHA256 /tmp/python.tar.xz" | sha256sum -c - \
     \
     && mkdir -p /usr/src/python \
     && tar -xJC /usr/src/python --strip-components=1 -f /tmp/python.tar.xz \
@@ -79,6 +69,7 @@ RUN \
         EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" \
         LDFLAGS="-Wl,--strip-all" \
         PROFILE_TASK="" \
+        EXTRA_CFLAGS="-fno-omit-frame-pointer -mno-omit-leaf-frame-pointer" \
     && make install \
     \
     && find /usr/local \
@@ -113,7 +104,6 @@ RUN \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
         /usr/src \
-        "$GNUPGHOME" \
         /tmp/* \
     \
     && python3 --version \
