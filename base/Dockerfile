@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:19.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,32 +18,32 @@ ARG PYTHON_SETUPTOOLS_VERSION="83.0.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         bzip2-dev=1.0.8-r6 \
-        dpkg-dev=1.22.15-r0 \
-        dpkg=1.22.15-r0 \
-        expat-dev=2.7.3-r0 \
-        findutils=4.10.0-r0 \
-        gcc=14.2.0-r6 \
-        gdbm-dev=1.24-r0 \
-        libffi-dev=3.4.8-r0 \
-        libnsl-dev=2.0.1-r1 \
-        libtirpc-dev=1.3.5-r0 \
-        linux-headers=6.14.2-r0 \
-        make=4.4.1-r3 \
-        musl-dev=1.2.5-r10 \
-        ncurses-dev=6.5_p20250503-r0 \
-        openssl-dev=3.5.4-r0 \
-        pax-utils=1.3.8-r1 \
-        readline-dev=8.2.13-r1 \
-        sqlite-dev=3.49.2-r1 \
-        tar=1.35-r3 \
-        tcl-dev=8.6.16-r0 \
-        tk-dev=8.6.16-r0 \
-        tk=8.6.16-r0 \
-        util-linux-dev=2.41-r9 \
-        xz-dev=5.8.1-r0 \
-        xz=5.8.1-r0 \
-        zlib-dev=1.3.1-r2 \
-        zstd-dev=1.5.7-r0 \
+        dpkg-dev=1.23.7-r0 \
+        dpkg=1.23.7-r0 \
+        expat-dev=2.8.3-r0 \
+        findutils=4.10.0-r1 \
+        gcc=15.2.0-r5 \
+        gdbm-dev=1.26-r0 \
+        libffi-dev=3.5.2-r1 \
+        libnsl-dev=2.0.1-r2 \
+        libtirpc-dev=1.3.5-r1 \
+        linux-headers=7.0.0-r1 \
+        make=4.4.1-r4 \
+        musl-dev=1.2.6-r2 \
+        ncurses-dev=6.6_p20260516-r0 \
+        openssl-dev=3.5.8-r0 \
+        pax-utils=1.3.9-r1 \
+        readline-dev=8.3.3-r1 \
+        sqlite-dev=3.53.4-r0 \
+        tar=1.35-r5 \
+        tcl-dev=8.6.17-r1 \
+        tk-dev=8.6.17-r1 \
+        tk=8.6.17-r1 \
+        util-linux-dev=2.42.1-r0 \
+        xz-dev=5.8.3-r0 \
+        xz=5.8.3-r0 \
+        zlib-dev=1.3.2-r0 \
+        zstd-dev=1.5.7-r2 \
     \
     && curl -J -L -o /tmp/python.tar.xz \
         "https://www.python.org/ftp/python/${PYTHON_VERSION#v}/Python-${PYTHON_VERSION#v}.tar.xz" \
