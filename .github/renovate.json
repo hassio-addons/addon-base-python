@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["helpers:pinGitHubActionDigests"],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
   "labels": ["dependencies", "no-stale"],
@@ -8,7 +9,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$", "/build.yaml$"],
+      "managerFilePatterns": ["//Dockerfile$/", "//build.yaml$/"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>.*?)\\s+",
@@ -18,7 +19,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$"],
+      "managerFilePatterns": ["//Dockerfile$/"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "\\s\\s(?<package>[a-z0-9][a-z0-9-_]+)=(?<currentValue>[a-z0-9-_.]+)\\s+"
@@ -29,7 +30,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$"],
+      "managerFilePatterns": ["//Dockerfile$/"],
       "matchStrings": [
         "ARG PYTHON_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
       ],
@@ -38,7 +39,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$"],
+      "managerFilePatterns": ["//Dockerfile$/"],
       "matchStrings": [
         "ARG PYTHON_SETUPTOOLS_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
       ],
@@ -47,7 +48,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$"],
+      "managerFilePatterns": ["//Dockerfile$/"],
       "matchStrings": [
         "ARG PYTHON_PIP_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
       ],
@@ -61,11 +62,11 @@
       "automerge": true
     },
     {
-      "groupName": "Add-on base image",
+      "groupName": "App base image",
       "matchDatasources": ["docker"]
     },
     {
-      "groupName": "Add-on base image",
+      "groupName": "App base image",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
